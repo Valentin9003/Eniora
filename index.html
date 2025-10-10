@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ENIORA — Очаквайте скоро</title>
+  <meta name="description" content="ENIORA — официалният сайт е в процес на разработка. Очаквайте скоро." />
+  <meta property="og:title" content="ENIORA — Очаквайте скоро" />
+  <meta property="og:description" content="Официалният сайт на ENIORA е в процес на разработка." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <style>
+    :root{
+      --bg:#0b0b0b;      /* дълбоко черно */
+      --fg:#f7f7f5;      /* светъл текст */
+      --amber:#f6c90e;   /* ENIORA акцент жълто */
+      --muted:#a9a9a9;   /* вторичен текст */
+      --card:#121212;    /* плочка */
+      --ring:#2a2a2a;    /* контур */
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1000px 600px at 85% 20%, rgba(246,201,14,0.10), transparent 60%),
+        radial-gradient(800px 500px at 10% 80%, rgba(246,201,14,0.08), transparent 60%),
+        var(--bg);
+      color:var(--fg);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+                   "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", Arial, sans-serif;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:720px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+      border:1px solid var(--ring);
+      border-radius:24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.03);
+      overflow:hidden;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:28px 28px 0 28px;
+    }
+
+    /* Елегантно “лого” със златист акцент (SVG без външни ресурси) */
+    .mark{
+      width:44px;height:44px;flex:0 0 44px;
+      display:grid;place-items:center;
+      border-radius:12px;
+      background:
+        radial-gradient(120% 100% at 50% 0%, #ffe16b 0%, #f6c90e 40%, #bb9300 100%);
+      box-shadow: inset 0 2px 6px rgba(255,255,255,0.15), 0 6px 18px rgba(246,201,14,0.25);
+    }
+    .mark svg{display:block;filter:drop-shadow(0 1px 1px rgba(0,0,0,0.35))}
+
+    .title{
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      font-weight:800;
+      font-size:20px;
+      line-height:1;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      margin-top:6px;
+    }
+
+    .hero{
+      padding:28px;
+      padding-top:14px;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      text-align:center;
+    }
+
+    .headline{
+      font-size: clamp(28px, 4.2vw, 44px);
+      line-height:1.06;
+      font-weight:800;
+      letter-spacing:-0.01em;
+    }
+
+    .accent{
+      position:relative;
+      display:inline-block;
+      padding:0 .22em;
+    }
+    .accent::after{
+      content:"";
+      position:absolute; left:0; right:0; bottom:6px; height:10px;
+      background:linear-gradient(90deg, rgba(246,201,14,0.0), rgba(246,201,14,0.65), rgba(246,201,14,0.0));
+      filter:blur(3px);
+      z-index:-1;
+    }
+
+    .desc{
+      color:#d7d7d2;
+      font-size: clamp(14px, 1.9vw, 18px);
+      line-height:1.6;
+      margin-inline:auto;
+      max-width:58ch;
+    }
+
+    .bar{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      align-items:center;
+      margin-top:6px;
+      flex-wrap:wrap;
+    }
+
+    .badge{
+      border:1px dashed rgba(246,201,14,0.65);
+      color:#ffe68a;
+      background:rgba(246,201,14,0.06);
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:13px;
+      letter-spacing:0.04em;
+    }
+
+    .cta{
+      margin-top:6px;
+      display:inline-grid;
+      place-items:center;
+      padding:14px 22px;
+      border-radius:14px;
+      border:1px solid var(--ring);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
+      color:var(--fg);
+      text-decoration:none;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+      will-change: transform;
+    }
+    .cta:hover{
+      transform: translateY(-1px);
+      border-color: rgba(246,201,14,0.6);
+      box-shadow: 0 8px 26px rgba(246,201,14,0.16);
+    }
+
+    .footer{
+      margin-top:6px;
+      padding:20px 28px 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      border-top:1px solid var(--ring);
+      color:var(--muted);
+      font-size:13px;
+      flex-wrap:wrap;
+    }
+
+    .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: var(--amber);
+      box-shadow: 0 0 14px rgba(246,201,14,0.7);
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{transform:scale(1);opacity: .9}
+      50%{transform:scale(1.22);opacity:1}
+    }
+
+    /* Дребни подобрения за достъпност */
+    .sr{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-label="ENIORA — Очаквайте скоро">
+    <header class="brand" aria-label="ENIORA Brand">
+      <div class="mark" aria-hidden="true">
+        <!-- Минимален монограм “E” -->
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 5h12v3H9v4h8v3H9v4h9v3H6V5z" fill="#0b0b0b"/>
+        </svg>
+      </div>
+      <div>
+        <div class="title">ENIORA</div>
+        <div class="subtitle">e-commerce atelier</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 class="headline">
+        <span class="accent">Очаквайте скоро</span>
+      </h1>
+      <p class="desc">
+        Официалният сайт на <strong>ENIORA</strong> е в процес на фино изработване.
+        Работим по детайлите — елегантна визия, бързина и стабилност.
+      </p>
+
+      <div class="bar" aria-label="Статус">
+        <span class="badge">Старт: 31.03.2026</span>
+        <span class="badge">BG / EU</span>
+        <span class="badge">Secure • HTTPS</span>
+      </div>
+
+      <a class="cta" href="mailto:office@eniora.com" aria-label="Свържете се с ENIORA по имейл">
+        Свържете се: office@eniora.com
+      </a>
+    </section>
+
+    <footer class="footer">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Страницата е активна</span>
+      </div>
+      <div>© <span id="y"></span> ENIORA. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <script>
+    // текуща година
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
