@@ -19,6 +19,7 @@
       --ring: #2a2a2a;
       --green: #3ac55b;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
@@ -30,22 +31,26 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow-x: hidden;
-      overflow-y: auto;
+      overflow: hidden;
     }
 
     .wrap {
-      width: 100%;
+      width: 92vw;
       max-width: 740px;
-      padding: calc(clamp(72px, 11vh, 100px) + env(safe-area-inset-top)) 32px 56px;
+      max-height: 92vh;
       background: rgba(255,255,255,0.02);
       border: 1px solid var(--ring);
       border-radius: 26px;
       box-shadow: 0 0 25px rgba(0,0,0,0.85);
       text-align: center;
       backdrop-filter: blur(6px);
+      padding: 3vh 2vw;
       animation: fadeIn 0.9s ease-out;
-      overflow: visible;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform-origin: center;
     }
 
     @keyframes fadeIn {
@@ -56,93 +61,109 @@
     .logo-box {
       display: flex;
       justify-content: center;
-      margin: 0 auto 3px;
+      margin: 0 auto 4px;
     }
+
     .logo-plate {
       position: relative;
       display: inline-block;
-      padding: 12px 14px 10px;
+      padding: 10px 12px 8px;
       background: #070707;
       border-radius: 8px;
     }
+
     .logo-img {
       display: block;
-      width: clamp(120px, 21vw, 150px);
+      width: clamp(110px, 20vw, 140px);
       height: auto;
       object-fit: contain;
-      filter: drop-shadow(0 5px 10px rgba(0,0,0,0.6));
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
     }
+
     .logo-plate .tm {
       position: absolute;
-      top: 4px;
-      right: 6px;
-      font-size: .6em;
+      top: 3px;
+      right: 5px;
+      font-size: .55em;
       color: var(--muted);
       opacity: .8;
     }
 
     .subtitle {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 18px;
     }
+
     .headline {
-      font-size: clamp(32px, 5vw, 48px);
+      font-size: clamp(26px, 4.5vw, 42px);
       font-weight: 800;
       color: var(--amber);
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
+
     .desc {
       color: #d7d7d2;
-      font-size: 16px;
-      line-height: 1.65;
-      max-width: 58ch;
-      margin: 0 auto 18px;
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 54ch;
+      margin: 0 auto 12px;
     }
+
     .subdesc {
       color: #9f9f9f;
-      font-size: 13px;
-      line-height: 1.6;
+      font-size: 12px;
+      line-height: 1.45;
       font-style: italic;
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
 
-    .countdown { display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin-bottom:16px; }
-    .timebox { background: rgba(246,201,14,0.07); border: 1px solid rgba(246,201,14,0.4); border-radius:14px; padding:10px 16px; min-width:76px; }
-    .timebox .num { font-size:20px; font-weight:700; color:var(--amber); }
-    .timebox .label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+    .countdown { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+    .timebox { background: rgba(246,201,14,0.07); border: 1px solid rgba(246,201,14,0.4); border-radius:12px; padding:8px 10px; min-width:64px; }
+    .timebox .num { font-size:17px; font-weight:700; color:var(--amber); }
+    .timebox .label { font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
 
     .badge { border:1px dashed rgba(246,201,14,0.6); color:#ffe68a; background:rgba(246,201,14,0.05);
-             padding:8px 14px; border-radius:999px; font-size:13px; margin:4px; display:inline-block; }
-
-    .cta { display:inline-flex; align-items:center; justify-content:center; gap:6px; margin-top:18px;
-           padding:12px 20px; border-radius:12px; border:1px solid var(--ring); color:var(--fg);
-           text-decoration:none; background:rgba(255,255,255,0.03); transition:all .2s ease; font-size:14px; }
-    .cta svg { fill:var(--green); width:18px; height:18px; }
-    .cta:hover { transform:translateY(-1px); border-color:rgba(246,201,14,0.6); box-shadow:0 0 14px rgba(246,201,14,0.2); }
+             padding:6px 10px; border-radius:999px; font-size:12px; margin:3px; display:inline-block; }
 
     .footer {
-      margin-top: 28px;
+      margin-top: 14px;
       border-top: 1px solid var(--ring);
-      padding-top: 12px;
+      padding-top: 8px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 6px;
     }
+
     .dot {
-      width: 7px; height: 7px; border-radius: 50%;
+      width: 6px; height: 6px; border-radius: 50%;
       background: var(--amber);
-      box-shadow: 0 0 10px rgba(246,201,14,0.7);
+      box-shadow: 0 0 8px rgba(246,201,14,0.7);
     }
 
-    @media (max-width: 768px) {
-      .wrap { padding: calc(clamp(68px, 13vh, 96px) + env(safe-area-inset-top)) 20px 48px; }
-      .logo-img { width: clamp(110px, 36vw, 132px); }
+    /* --- Мобилен вариант: по-компактен layout --- */
+    @media (max-width: 480px), (max-height: 750px) {
+      .wrap {
+        transform: scale(0.85);
+        padding: 2vh 3vw;
+      }
+      .headline { margin-bottom: 10px; }
+      .desc { font-size: 13px; margin-bottom: 10px; }
+      .subdesc { font-size: 11px; margin-bottom: 10px; }
+      .badge { font-size: 11px; padding: 4px 8px; }
+      .footer { font-size: 10px; }
+    }
+
+    @media (max-height: 640px) {
+      .wrap {
+        transform: scale(0.78);
+        padding: 1.5vh 2vw;
+      }
     }
   </style>
 </head>
@@ -156,7 +177,7 @@
       </div>
     </div>
 
-    <div class="subtitle">ONLINE STORE</div>
+    <div class="subtitle">ONLINE STORE PLATFORM</div>
 
     <h1 class="headline">Очаквайте скоро</h1>
     <p class="desc">
