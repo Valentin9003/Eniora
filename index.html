@@ -4,231 +4,217 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ENIORA — Очаквайте скоро</title>
-  <meta name="description" content="ENIORA — официалният сайт е в процес на разработка. Очаквайте скоро." />
+  <meta name="description" content="ENIORA™ — луксозен онлайн магазин. Официално откриване на 31 март 2026 г." />
   <meta property="og:title" content="ENIORA — Очаквайте скоро" />
-  <meta property="og:description" content="Официалният сайт на ENIORA е в процес на разработка." />
+  <meta property="og:description" content="ENIORA™ — онлайн магазин в процес на разработка. Отваряме на 31 март 2026 г." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b0b0b" />
+  <meta name="theme-color" content="#000000" />
+
   <style>
-    :root{
-      --bg:#0b0b0b;      /* дълбоко черно */
-      --fg:#f7f7f5;      /* светъл текст */
-      --amber:#f6c90e;   /* ENIORA акцент жълто */
-      --muted:#a9a9a9;   /* вторичен текст */
-      --card:#121212;    /* плочка */
-      --ring:#2a2a2a;    /* контур */
+    :root {
+      --bg: #000000;
+      --fg: #f7f7f5;
+      --amber: #f6c90e;
+      --muted: #a9a9a9;
+      --ring: #2a2a2a;
+      --green: #3ac55b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: #070707;
+      color: var(--fg);
+      font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:
-        radial-gradient(1000px 600px at 85% 20%, rgba(246,201,14,0.10), transparent 60%),
-        radial-gradient(800px 500px at 10% 80%, rgba(246,201,14,0.08), transparent 60%),
-        var(--bg);
-      color:var(--fg);
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-                   "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", Arial, sans-serif;
-      display:grid;
-      place-items:center;
-      padding:24px;
+    .wrap {
+      width: 100%;
+      max-width: 740px;
+      padding: calc(clamp(72px, 11vh, 100px) + env(safe-area-inset-top)) 32px 56px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--ring);
+      border-radius: 26px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.85);
+      text-align: center;
+      backdrop-filter: blur(6px);
+      animation: fadeIn 0.9s ease-out;
+      overflow: visible;
     }
 
-    .wrap{
-      width:100%;
-      max-width:720px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
-      border:1px solid var(--ring);
-      border-radius:24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.03);
-      overflow:hidden;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      padding:28px 28px 0 28px;
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 3px;
+    }
+    .logo-plate {
+      position: relative;
+      display: inline-block;
+      padding: 12px 14px 10px;
+      background: #070707;
+      border-radius: 8px;
+    }
+    .logo-img {
+      display: block;
+      width: clamp(120px, 21vw, 150px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 5px 10px rgba(0,0,0,0.6));
+    }
+    .logo-plate .tm {
+      position: absolute;
+      top: 4px;
+      right: 6px;
+      font-size: .6em;
+      color: var(--muted);
+      opacity: .8;
     }
 
-    /* Елегантно “лого” със златист акцент (SVG без външни ресурси) */
-    .mark{
-      width:44px;height:44px;flex:0 0 44px;
-      display:grid;place-items:center;
-      border-radius:12px;
-      background:
-        radial-gradient(120% 100% at 50% 0%, #ffe16b 0%, #f6c90e 40%, #bb9300 100%);
-      box-shadow: inset 0 2px 6px rgba(255,255,255,0.15), 0 6px 18px rgba(246,201,14,0.25);
+    .subtitle {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
     }
-    .mark svg{display:block;filter:drop-shadow(0 1px 1px rgba(0,0,0,0.35))}
-
-    .title{
-      letter-spacing:0.18em;
-      text-transform:uppercase;
-      font-weight:800;
-      font-size:20px;
-      line-height:1;
+    .headline {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      color: var(--amber);
+      margin-bottom: 22px;
     }
-    .subtitle{
-      color:var(--muted);
-      font-size:12px;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      margin-top:6px;
+    .desc {
+      color: #d7d7d2;
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 58ch;
+      margin: 0 auto 18px;
     }
-
-    .hero{
-      padding:28px;
-      padding-top:14px;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      text-align:center;
+    .subdesc {
+      color: #9f9f9f;
+      font-size: 13px;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 22px;
     }
 
-    .headline{
-      font-size: clamp(28px, 4.2vw, 44px);
-      line-height:1.06;
-      font-weight:800;
-      letter-spacing:-0.01em;
-    }
+    .countdown { display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin-bottom:16px; }
+    .timebox { background: rgba(246,201,14,0.07); border: 1px solid rgba(246,201,14,0.4); border-radius:14px; padding:10px 16px; min-width:76px; }
+    .timebox .num { font-size:20px; font-weight:700; color:var(--amber); }
+    .timebox .label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
 
-    .accent{
-      position:relative;
-      display:inline-block;
-      padding:0 .22em;
-    }
-    .accent::after{
-      content:"";
-      position:absolute; left:0; right:0; bottom:6px; height:10px;
-      background:linear-gradient(90deg, rgba(246,201,14,0.0), rgba(246,201,14,0.65), rgba(246,201,14,0.0));
-      filter:blur(3px);
-      z-index:-1;
-    }
+    .badge { border:1px dashed rgba(246,201,14,0.6); color:#ffe68a; background:rgba(246,201,14,0.05);
+             padding:8px 14px; border-radius:999px; font-size:13px; margin:4px; display:inline-block; }
 
-    .desc{
-      color:#d7d7d2;
-      font-size: clamp(14px, 1.9vw, 18px);
-      line-height:1.6;
-      margin-inline:auto;
-      max-width:58ch;
-    }
+    .cta { display:inline-flex; align-items:center; justify-content:center; gap:6px; margin-top:18px;
+           padding:12px 20px; border-radius:12px; border:1px solid var(--ring); color:var(--fg);
+           text-decoration:none; background:rgba(255,255,255,0.03); transition:all .2s ease; font-size:14px; }
+    .cta svg { fill:var(--green); width:18px; height:18px; }
+    .cta:hover { transform:translateY(-1px); border-color:rgba(246,201,14,0.6); box-shadow:0 0 14px rgba(246,201,14,0.2); }
 
-    .bar{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      align-items:center;
-      margin-top:6px;
-      flex-wrap:wrap;
+    .footer {
+      margin-top: 28px;
+      border-top: 1px solid var(--ring);
+      padding-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
     }
-
-    .badge{
-      border:1px dashed rgba(246,201,14,0.65);
-      color:#ffe68a;
-      background:rgba(246,201,14,0.06);
-      padding:10px 14px;
-      border-radius:999px;
-      font-size:13px;
-      letter-spacing:0.04em;
-    }
-
-    .cta{
-      margin-top:6px;
-      display:inline-grid;
-      place-items:center;
-      padding:14px 22px;
-      border-radius:14px;
-      border:1px solid var(--ring);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
-      color:var(--fg);
-      text-decoration:none;
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
-      will-change: transform;
-    }
-    .cta:hover{
-      transform: translateY(-1px);
-      border-color: rgba(246,201,14,0.6);
-      box-shadow: 0 8px 26px rgba(246,201,14,0.16);
-    }
-
-    .footer{
-      margin-top:6px;
-      padding:20px 28px 28px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      border-top:1px solid var(--ring);
-      color:var(--muted);
-      font-size:13px;
-      flex-wrap:wrap;
-    }
-
-    .dot{
-      width:8px;height:8px;border-radius:50%;
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
       background: var(--amber);
-      box-shadow: 0 0 14px rgba(246,201,14,0.7);
-      animation: pulse 1.8s ease-in-out infinite;
-    }
-    @keyframes pulse{
-      0%,100%{transform:scale(1);opacity: .9}
-      50%{transform:scale(1.22);opacity:1}
+      box-shadow: 0 0 10px rgba(246,201,14,0.7);
     }
 
-    /* Дребни подобрения за достъпност */
-    .sr{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    @media (max-width: 768px) {
+      .wrap { padding: calc(clamp(68px, 13vh, 96px) + env(safe-area-inset-top)) 20px 48px; }
+      .logo-img { width: clamp(110px, 36vw, 132px); }
+    }
   </style>
 </head>
+
 <body>
-  <main class="wrap" role="main" aria-label="ENIORA — Очаквайте скоро">
-    <header class="brand" aria-label="ENIORA Brand">
-      <div class="mark" aria-hidden="true">
-        <!-- Минимален монограм “E” -->
-        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 5h12v3H9v4h8v3H9v4h9v3H6V5z" fill="#0b0b0b"/>
-        </svg>
+  <main class="wrap">
+    <div class="logo-box">
+      <div class="logo-plate">
+        <img src="eniora.png" alt="ENIORA Logo" class="logo-img" />
+        <span class="tm">™</span>
       </div>
-      <div>
-        <div class="title">ENIORA</div>
-        <div class="subtitle">e-commerce atelier</div>
-      </div>
-    </header>
+    </div>
 
-    <section class="hero">
-      <h1 class="headline">
-        <span class="accent">Очаквайте скоро</span>
-      </h1>
-      <p class="desc">
-        Официалният сайт на <strong>ENIORA</strong> е в процес на фино изработване.
-        Работим по детайлите — елегантна визия, бързина и стабилност.
-      </p>
+    <div class="subtitle">ONLINE STORE PLATFORM</div>
 
-      <div class="bar" aria-label="Статус">
-        <span class="badge">Старт: 31.03.2026</span>
-        <span class="badge">BG / EU</span>
-        <span class="badge">Secure • HTTPS</span>
-      </div>
+    <h1 class="headline">Очаквайте скоро</h1>
+    <p class="desc">
+      <strong>ENIORA™</strong> подготвя своя собствен онлайн магазин.<br>
+      Създаваме модерна, сигурна и гъвкава среда за бъдещи клиенти и партньори.<br>
+      Официалното откриване е на <strong>31 март 2026 г.</strong>
+    </p>
 
-      <a class="cta" href="mailto:office@eniora.com" aria-label="Свържете се с ENIORA по имейл">
-        Свържете се: office@eniora.com
-      </a>
-    </section>
+    <p class="subdesc">
+      Coming soon — ENIORA™ is preparing its official online store.<br>
+      Modern, secure and flexible shopping experience.<br>
+      Grand opening — March 31, 2026.
+    </p>
+
+    <div id="countdown" class="countdown"></div>
+
+    <div>
+      <span class="badge">Opening: 31.03.2026</span>
+      <span class="badge">The Official Website of ENIORA™</span>
+      <span class="badge">Starting in Bulgaria</span>
+    </div>
 
     <footer class="footer">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="dot" aria-hidden="true"></span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="dot"></span>
         <span>Страницата е активна</span>
       </div>
-      <div>© <span id="y"></span> ENIORA. All rights reserved.</div>
+      <div>© <span id="y"></span> ENIORA™ — Trademark established in the European Union</div>
     </footer>
   </main>
 
   <script>
-    // текуща година
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const endDate = new Date("2026-03-31T00:00:00+03:00").getTime();
+    const countdown = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = endDate - now;
+      if (diff <= 0) {
+        countdown.innerHTML = "<div class='badge'>🎉 ENIORA вече е онлайн!</div>";
+        clearInterval(timer);
+        return;
+      }
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+      countdown.innerHTML = `
+        <div class="timebox"><div class="num">${d}</div><div class="label">дни</div></div>
+        <div class="timebox"><div class="num">${h}</div><div class="label">часа</div></div>
+        <div class="timebox"><div class="num">${m}</div><div class="label">минути</div></div>
+        <div class="timebox"><div class="num">${s}</div><div class="label">секунди</div></div>
+      `;
+    }
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
