@@ -8,7 +8,7 @@
 ## 🌐 Website
 [https://eniora.bg](https://eniora.bg)
 
-ENIORA™ is preparing its official online store — a modern, secure and flexible e-commerce platform launching on **June 01, 2026**.
+ENIORA® is preparing its official online store — a modern, secure and flexible e-commerce platform launching on **June 01, 2026**.
 
 ---
 
