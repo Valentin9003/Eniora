@@ -15,7 +15,9 @@ ENIORA® is preparing its official online store — a modern, secure and flexibl
 ## ⚖️ Legal Notice
 - **Trademark:** ENIORA® is is a Registered trademark in the European Union Intellectual Property Office (EUIPO).  
 - **Copyright:** © 2025 ENIORA LTD. All rights reserved.  
-- **License:** Source code of this page is distributed under the [Apache License 2.0](./LICENSE).  
+- **License:** All rights reserved.  
+  The source code of this page is proprietary and may not be used, copied,
+  modified, or distributed without explicit written permission from the owner [License](./LICENSE).  
 - **Brand elements** (logo, name, and visual identity) are **not open-source** and may not be copied, modified, or used without written permission from ENIORA LTD.
 
 ---
