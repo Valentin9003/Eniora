@@ -1,7 +1,7 @@
 # ENIORA®
 
-**Official coming soon page for ENIORA® — a luxury online store brand (Trademark under examination in EUIPO).**  
-© 2025 ENIORA LTD. All rights reserved.
+**Official coming soon page for ENIORA® — a luxury online store brand (Registered trademark in the European Union Intellectual Property Office (EUIPO)
+© 2025 ENIORA LTD. All rights reserved.).**  
 
 ---
 
