@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>ENIORA — Очаквайте скоро</title>
-  <meta name="description" content="ENIORA® — луксозен онлайн магазин. Официално откриване на 1 септември 2026 г." />
+  <meta name="description" content="ENIORA®" />
   <meta property="og:title" content="ENIORA® — Очаквайте скоро" />
-  <meta property="og:description" content="ENIORA® — онлайн магазин в процес на разработка. Отваряме на 1 септември 2026 г." />
+  <meta property="og:description" content="ENIORA® — онлайн магазин в процес на разработка." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#000000" />
   <link rel="icon" href="eniorawhitelogo.png" type="image/png">
@@ -610,19 +610,16 @@
           <p class="desc">
             <strong>ENIORA®</strong> подготвя своя собствен онлайн магазин.<br>
             Създаваме модерна, сигурна и гъвкава среда за бъдещи клиенти и партньори.<br>
-            Официалното откриване е на <strong>1 септември 2026 г.</strong>
           </p>
 
           <p class="subdesc">
             Coming soon — ENIORA® is preparing its official online store.<br>
             Modern, secure and flexible shopping experience.<br>
-            Grand opening — September 1, 2026.
           </p>
 
           <div id="countdown" class="countdown"></div>
 
           <div class="badges">
-            <span class="badge">Opening: 01.09.2026</span>
             <span class="badge">Starting in Bulgaria</span>
             <span class="badge">The Official Website of ENIORA®</span>
           </div>
@@ -638,50 +635,5 @@
       </div>
     </section>
   </main>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    const endDate = new Date("2026-09-01T00:00:00+03:00").getTime();
-    const countdown = document.getElementById("countdown");
-
-    function updateCountdown() {
-      const now = Date.now();
-      const diff = endDate - now;
-
-      if (diff <= 0) {
-        countdown.innerHTML = "<div class='badge'>🎉 ENIORA® вече е онлайн!</div>";
-        clearInterval(timer);
-        return;
-      }
-
-      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `
-        <div class="timebox">
-          <div class="num">${d}</div>
-          <div class="label">дни</div>
-        </div>
-        <div class="timebox">
-          <div class="num">${h}</div>
-          <div class="label">часа</div>
-        </div>
-        <div class="timebox">
-          <div class="num">${m}</div>
-          <div class="label">минути</div>
-        </div>
-        <div class="timebox">
-          <div class="num">${s}</div>
-          <div class="label">секунди</div>
-        </div>
-      `;
-    }
-
-    updateCountdown();
-    const timer = setInterval(updateCountdown, 1000);
-  </script>
 </body>
 </html>
